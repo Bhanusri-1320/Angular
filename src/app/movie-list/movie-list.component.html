@@ -1,8 +1,5 @@
-@for (movie of Movies; track movie.name) {
-<app-movies
-  [name]="movie.name"
-  [poster]="movie.poster"
-  [summary]="movie.summary"
-  [rating]="movie.rating"
-/>
-}
+<section>
+  @for (movie of Movies; track movie.name) {
+  <app-movies [Movies]="movie" />
+  }
+</section>

@@ -1,0 +1,11 @@
+<button (click)="likeCounter()">
+  <h1>👍 {{ like }}</h1>
+</button>
+<br />
+<button (click)="dislikeCounter()">
+  <h1>👎 {{ dislike }}</h1>
+</button>
+
+@if({{ like }} - {{ dislike }} >10) {
+<h1>Your Awesome💜❤️🎊</h1>
+}

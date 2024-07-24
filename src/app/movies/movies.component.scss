@@ -1,10 +1,42 @@
-body{
-    justify-content:center;
-    margin: 0;
-    display: grid;
-    min-height: 100vh;
-    place-content: center;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .image-container
+// {
+//     width: 100px;
+//     height: 100px;
+// }
 
 
 // body
@@ -73,3 +105,23 @@ body{
 // //     flex-wrap: wrap;
 // // }
 // // }
+
+body
+{
+ margin: 0%;
+ place-content: center;
+ min-height: 100vh;
+ display: grid;
+}
+
+.image
+{
+    height: 200px;
+    width: 200px;
+    border-radius: 14px;
+}
+.image-container
+{
+    width: 100px;
+    height: 100px;
+}

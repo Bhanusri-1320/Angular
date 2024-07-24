@@ -16,17 +16,29 @@
   </main>
 </body> -->
 
-<body>
+<div class="main-container">
+  <div class="image-container">
+    <img src="{{ Movies.poster }}" alt="" class="image" />
+  </div>
+  <div class="content">
+    <div class="head-container">
+      <h1>{{ Movies.name }}</h1>
+      <h1>⭐{{ Movies.rating }}</h1>
+    </div>
+    <p>{{ Movies.summary }}</p>
+  </div>
+</div>
+<!-- <body>
   <div class="main-container">
     <div class="image-container">
-      <img src="{{ poster }}" alt="" />
+      <img src="{{ Movies.poster }}" alt="" />
     </div>
     <div class="content">
       <div class="head-container">
-        <h1>{{ name }}</h1>
-        <h1>⭐{{ rating }}</h1>
+        <h1>{{ Movies.name }}</h1>
+        <h1>⭐{{ Movies.rating }}</h1>
       </div>
-      <p>{{ summary }}</p>
+      <p>{{ Movies.summary }}</p>
     </div>
   </div>
-</body>
+</body> -->
