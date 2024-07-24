@@ -19,18 +19,6 @@ Calling Component -->
   <app-user name="Summi" />
   <app-user name="Nithin" /> -->
 
-<app-user
-  name="BhanuSri"
-  image="https://www.hyundai.com/content/dam/hyundai/ww/en/images/worldcup/08-bts/worldcup-bts-stg-m.jpg"
-/>
-<app-user
-  name="Harshu"
-  image="https://m.media-amazon.com/images/M/MV5BNzkxOGE0NzgtYzAwYS00NWE4LTk4Y2EtMWE4YTQ0YjVlMTdiXkEyXkFqcGdeQXVyMTU3ODQxNDYz._V1_FMjpg_UX1000_.jpg"
-/>
-<app-user
-  name="Chikku"
-  image="https://www.billboard.com/wp-content/uploads/2021/12/bts-courtesy-billboard-japan-1548.jpg?w=942&h=623&crop=1"
-/>
 <!-- <app-movies
     image="https://flxt.tmsimg.com/assets/p11546593_p_v10_af.jpg"
     Heading="Baahubali"
@@ -57,8 +45,46 @@ Calling Component -->
     content="Members of a black ops team must track and eliminate a gang of masked murderers."
   /> -->
 
+<!-- @for (user of Users; track user.name) {
+<app-user name="{{ user.name }}," image="{{ user.image }}" />
+}
+//  using property binding
+@for (user of Users; track user.name) {
+<app-user [name]="user.name" [image]="user.image" />
+} -->
+
+<!-- @for (movie of Movies; track movie.name) {
+<app-movies
+  [name]="movie.name"
+  ,
+  [poster]="movie.poster"
+  ,[summery]="movie.summary"
+  ,[rating]="movie.rating"
+/>
+} -->
+<app-movie-list />
+<!-- <app-user
+  name="BhanuSri"
+  image="https://www.hyundai.com/content/dam/hyundai/ww/en/images/worldcup/08-bts/worldcup-bts-stg-m.jpg"
+/>
+<app-user
+  name="Harshu"
+  image="https://m.media-amazon.com/images/M/MV5BNzkxOGE0NzgtYzAwYS00NWE4LTk4Y2EtMWE4YTQ0YjVlMTdiXkEyXkFqcGdeQXVyMTU3ODQxNDYz._V1_FMjpg_UX1000_.jpg"
+/>
+<app-user
+  name="Chikku"
+  image="https://www.billboard.com/wp-content/uploads/2021/12/bts-courtesy-billboard-japan-1548.jpg?w=942&h=623&crop=1"
+/> -->
+
 <router-outlet />
 
+<!-- const Users=[ { name:"BhanuSri"
+image:"https://www.hyundai.com/content/dam/hyundai/ww/en/images/worldcup/08-bts/worldcup-bts-stg-m.jpg"
+}, { name:" Harshu" image:
+"https://m.media-amazon.com/images/M/MV5BNzkxOGE0NzgtYzAwYS00NWE4LTk4Y2EtMWE4YTQ0YjVlMTdiXkEyXkFqcGdeQXVyMTU3ODQxNDYz._V1_FMjpg_UX1000_.jpg"
+} , { name:"chiukku" image:
+"https://www.billboard.com/wp-content/uploads/2021/12/bts-courtesy-billboard-japan-1548.jpg?w=942&h=623&crop=1"
+} ] -->
 <!-- [
   {
     "name": "Vikram",

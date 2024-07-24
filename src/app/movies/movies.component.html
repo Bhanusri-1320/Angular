@@ -1,34 +1,32 @@
-<body>
+<!-- <body>
   <main class="main-conatiner">
-    @for (movie of Movies; track movie.name) {
     <div class="inner-container">
       <section>
-        <img src="{{ movie.poster }}" alt="" class="image-container" />
+        <img src="{{ poster }}" alt="" class="image-container" />
       </section>
       <br />
       <section class="content">
         <div class="head-container">
-          <h1>{{ movie.name }}</h1>
-          <h1>⭐{{ movie.rating }}</h1>
+          <h1>{{ name }}</h1>
+          <h1>⭐{{ rating }}</h1>
         </div>
-        <p>{{ movie.summary }}</p>
+        <p>{{ summary }}</p>
       </section>
     </div>
-    }
   </main>
-</body>
+</body> -->
 
-<!-- <body>
+<body>
   <div class="main-container">
     <div class="image-container">
-      <img src="{{ image }}" alt="" />
+      <img src="{{ poster }}" alt="" />
     </div>
     <div class="content">
       <div class="head-container">
-        <h1>{{ Heading }}</h1>
+        <h1>{{ name }}</h1>
         <h1>⭐{{ rating }}</h1>
       </div>
-      <p>{{ content }}</p>
+      <p>{{ summary }}</p>
     </div>
   </div>
-</body> -->
+</body>

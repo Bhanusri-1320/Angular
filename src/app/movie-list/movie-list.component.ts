@@ -1,27 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { UserComponent } from './user/user.component';
-import { MoviesComponent } from './movies/movies.component';
-import { MovieListComponent } from './movie-list/movie-list.component';
+import { MoviesComponent } from '../movies/movies.component';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-movie-list',
   standalone: true,
-  imports: [RouterOutlet,MovieListComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  imports: [MoviesComponent],
+  templateUrl: './movie-list.component.html',
+  styleUrl: './movie-list.component.scss'
 })
-export class AppComponent {
-  title = 'BTS❤️💜🎊🎊';
-  profilePic="https://www.pinkvilla.com/pics/500x500/64642134_why-bts-is-popular_202403.jpg"
-  // Users=[ { name:"BhanuSri",
-  //   image:"https://www.hyundai.com/content/dam/hyundai/ww/en/images/worldcup/08-bts/worldcup-bts-stg-m.jpg"
-  //   }, { name:" Harshu" ,image:
-  //   "https://m.media-amazon.com/images/M/MV5BNzkxOGE0NzgtYzAwYS00NWE4LTk4Y2EtMWE4YTQ0YjVlMTdiXkEyXkFqcGdeQXVyMTU3ODQxNDYz._V1_FMjpg_UX1000_.jpg"
-  //   } , { name:"chiukku", image:
-  //   "https://www.billboard.com/wp-content/uploads/2021/12/bts-courtesy-billboard-japan-1548.jpg?w=942&h=623&crop=1"
-  //   } ]
-    Movies=
+export class MovieListComponent {
+  Movies=
   [
     {
       "name": "Vikram",
@@ -90,5 +78,4 @@ export class AppComponent {
       "rating": 8.8
     }
   ]
-  
-  }
+}
