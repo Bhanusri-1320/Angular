@@ -19,8 +19,4 @@ export class CounterComponent {
    {
     this.dislike+=1;
    }
-   display()
-   {
-    
-   }
 }

@@ -1,11 +1,15 @@
-<button (click)="likeCounter()">
-  <h1>👍 {{ like }}</h1>
-</button>
-<br />
-<button (click)="dislikeCounter()">
-  <h1>👎 {{ dislike }}</h1>
-</button>
+<div class="conatiner">
+  <button (click)="likeCounter()">
+    <h1>👍 {{ like }}</h1>
+  </button>
+  <br />
+  <button (click)="dislikeCounter()">
+    <h1>👎 {{ dislike }}</h1>
+  </button>
+</div>
 
-@if({{ like }} - {{ dislike }} >10) {
+<progress id="file" max="100" value="{{ like - dislike }}"></progress>
+
+@if(like - dislike >10 ) {
 <h1>Your Awesome💜❤️🎊</h1>
 }
