@@ -56,9 +56,17 @@ Calling Component -->
   }
 </section> -->
 
-<app-movie-list [MoviesList]="MoviesList" />
+<!-- <app-movie-list [MoviesList]="MoviesList" /> -->
 
-<!-- @for (movie of Movies; track movie.name) {
+<nav>
+  <a href="/">Home</a>
+  |
+  <a routerLink="/movie">User with href</a>
+  |
+  <a routerLink="/color">color-game</a>
+</nav>
+<router-outlet>
+  <!-- @for (movie of Movies; track movie.name) {
 <app-movies
   [name]="movie.name",
   
@@ -67,10 +75,10 @@ Calling Component -->
   [rating]="movie.rating"
 />
 } -->
-<!-- <app-counter /> -->
-<!-- <app-color-game /> -->
-<!-- <app-movie-list /> -->
-<!-- <app-user
+  <!-- <app-counter /> -->
+  <!-- <app-color-game /> -->
+  <!-- <app-movie-list /> -->
+  <!-- <app-user
   name="BhanuSri"
   image="https://www.hyundai.com/content/dam/hyundai/ww/en/images/worldcup/08-bts/worldcup-bts-stg-m.jpg"
 />
@@ -83,16 +91,14 @@ Calling Component -->
   image="https://www.billboard.com/wp-content/uploads/2021/12/bts-courtesy-billboard-japan-1548.jpg?w=942&h=623&crop=1"
 /> -->
 
-<router-outlet />
-
-<!-- const Users=[ { name:"BhanuSri"
+  <!-- const Users=[ { name:"BhanuSri"
 image:"https://www.hyundai.com/content/dam/hyundai/ww/en/images/worldcup/08-bts/worldcup-bts-stg-m.jpg"
 }, { name:" Harshu" image:
 "https://m.media-amazon.com/images/M/MV5BNzkxOGE0NzgtYzAwYS00NWE4LTk4Y2EtMWE4YTQ0YjVlMTdiXkEyXkFqcGdeQXVyMTU3ODQxNDYz._V1_FMjpg_UX1000_.jpg"
 } , { name:"chiukku" image:
 "https://www.billboard.com/wp-content/uploads/2021/12/bts-courtesy-billboard-japan-1548.jpg?w=942&h=623&crop=1"
 } ] -->
-<!-- [
+  <!-- [
   {
     "name": "Vikram",
     "poster": "https://m.media-amazon.com/images/M/MV5BMmJhYTYxMGEtNjQ5NS00MWZiLWEwN2ItYjJmMWE2YTU1YWYxXkEyXkFqcGdeQXVyMTEzNzg0Mjkx._V1_.jpg",
@@ -167,3 +173,4 @@ image:"https://www.hyundai.com/content/dam/hyundai/ww/en/images/worldcup/08-bts/
     "rating": 8.8
   }
 ] -->
+</router-outlet>
