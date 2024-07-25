@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { flatMap } from 'rxjs';
+import { CounterComponent } from '../counter/counter.component';
 
 @Component({
   selector: 'app-movies',
   standalone: true,
-  imports: [],
+  imports: [CounterComponent],
   templateUrl: './movies.component.html',
   styleUrl: './movies.component.scss',
 })
@@ -23,11 +24,8 @@ export class MoviesComponent {
   };
   show = true;
   Toggle() {
-    if (this.show) {
-      this.show = false;
-    } else {
-      this.show = true;
-    }
+    //this.show = this.show ? false : true;
+    this.show = !this.show;
   }
   // Movies=
   //   [

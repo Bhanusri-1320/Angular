@@ -1,11 +1,7 @@
 <div class="conatiner">
-  <button (click)="likeCounter()">
-    <h1>❤️ {{ like }}</h1>
-  </button>
+  <button (click)="likeCounter()">👍 {{ like }}</button>
   <br />
-  <button (click)="dislikeCounter()">
-    <h1>👎 {{ dislike }}</h1>
-  </button>
+  <button (click)="dislikeCounter()">👎 {{ dislike }}</button>
 </div>
 
 <!-- <progress
@@ -15,7 +11,7 @@
 ></progress> -->
 
 <!-- <progress id="file" max="{{ like + dislike }}" value="{{ like }}">70%</progress> -->
-<progress id="file" [max]="like + dislike" [value]="like"></progress>
+
+<!-- <progress id="file" [max]="like + dislike" [value]="like"></progress>
 @if(like - dislike >10 ) {
-<h1>Your Awesome💜❤️🎊</h1>
-}
+<h1>Your Awesome💜❤️🎊</h1> -->
