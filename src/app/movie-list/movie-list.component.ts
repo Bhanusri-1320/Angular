@@ -12,13 +12,13 @@ import { FormsModule } from '@angular/forms';
 export class MovieListComponent {
   name = '';
   poster = '';
-  rating = 0;
+  rating = '';
   summary = '';
   @Input() MoviesList: any;
   @Input() obj = {
     name: this.name,
     poster: this.poster,
-    rating: this.rating,
+    rating: +this.rating,
     summary: this.summary,
   };
   addMovie() {
