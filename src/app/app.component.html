@@ -20,49 +20,55 @@ Calling Component -->
   <app-user name="Nithin" /> -->
 
 <!-- <app-movies
-    image="https://flxt.tmsimg.com/assets/p11546593_p_v10_af.jpg"
-    Heading="Baahubali"
-    rating="8"
-    content="In the kingdom of Mahishmati, Shivudu falls in love with a young warrior woman. While trying to woo her, he learns about the conflict-ridden past of his family and his true legacy."
-  />
+  image="https://flxt.tmsimg.com/assets/p11546593_p_v10_af.jpg"
+  Heading="Baahubali"
+  rating="8"
+  content="In the kingdom of Mahishmati, Shivudu falls in love with a young warrior woman. While trying to woo her, he learns about the conflict-ridden past of his family and his true legacy."
+/>
 
-  <app-movies
-    image="https://englishtribuneimages.blob.core.windows.net/gallary-content/2021/6/Desk/2021_6$largeimg_977224513.JPG"
-    Heading="RRR"
-    rating="8.8"
-    content="RRR is an upcoming Indian Telugu-language period action drama film directed by S. S. Rajamouli, and produced by D. V. V. Danayya of DVV Entertainments."
-  />
-  <app-movies
-    image="https://m.media-amazon.com/images/M/MV5BMTM0MDgwNjMyMl5BMl5BanBnXkFtZTcwNTg3NzAzMw@@._V1_FMjpg_UX1000_.jpg"
-    Heading="Iron man 2"
-    rating="7"
-    content="With the world now aware that he is Iron Man, billionaire inventor Tony Stark (Robert Downey Jr.) faces pressure from all sides to share his technology with the military. He is reluctant to divulge the secrets of his armored suit, fearing the information will fall into the wrong hands. With Pepper Potts (Gwyneth Paltrow) and Rhodes (Don Cheadle) by his side, Tony must forge new alliances and confront a powerful new enemy."
-  />
-  <app-movies
-    image="https://m.media-amazon.com/images/M/MV5BMmJhYTYxMGEtNjQ5NS00MWZiLWEwN2ItYjJmMWE2YTU1YWYxXkEyXkFqcGdeQXVyMTEzNzg0Mjkx._V1_.jpg"
-    Heading="Vikram"
-    rating="8.4"
-    content="Members of a black ops team must track and eliminate a gang of masked murderers."
-  /> -->
+<app-movies
+  image="https://englishtribuneimages.blob.core.windows.net/gallary-content/2021/6/Desk/2021_6$largeimg_977224513.JPG"
+  Heading="RRR"
+  rating="8.8"
+  content="RRR is an upcoming Indian Telugu-language period action drama film directed by S. S. Rajamouli, and produced by D. V. V. Danayya of DVV Entertainments."
+/>
+<app-movies
+  image="https://m.media-amazon.com/images/M/MV5BMTM0MDgwNjMyMl5BMl5BanBnXkFtZTcwNTg3NzAzMw@@._V1_FMjpg_UX1000_.jpg"
+  Heading="Iron man 2"
+  rating="7"
+  content="With the world now aware that he is Iron Man, billionaire inventor Tony Stark (Robert Downey Jr.) faces pressure from all sides to share his technology with the military. He is reluctant to divulge the secrets of his armored suit, fearing the information will fall into the wrong hands. With Pepper Potts (Gwyneth Paltrow) and Rhodes (Don Cheadle) by his side, Tony must forge new alliances and confront a powerful new enemy."
+/>
+<app-movies
+  image="https://m.media-amazon.com/images/M/MV5BMmJhYTYxMGEtNjQ5NS00MWZiLWEwN2ItYjJmMWE2YTU1YWYxXkEyXkFqcGdeQXVyMTEzNzg0Mjkx._V1_.jpg"
+  Heading="Vikram"
+  rating="8.4"
+  content="Members of a black ops team must track and eliminate a gang of masked murderers."
+/> -->
 
 <!-- @for (user of Users; track user.name) {
 <app-user name="{{ user.name }}," image="{{ user.image }}" />
-}
-//  using property binding
-@for (user of Users; track user.name) {
+} // using property binding @for (user of Users; track user.name) {
 <app-user [name]="user.name" [image]="user.image" />
 } -->
+<!-- <section class="main">
+  @for (movie of Movies; track $index) {
+  <app-movies [Movies]="movie" />
+  }
+</section> -->
+
+<app-movie-list [MoviesList]="MoviesList" />
 
 <!-- @for (movie of Movies; track movie.name) {
 <app-movies
-  [name]="movie.name"
-  ,
-  [poster]="movie.poster"
-  ,[summery]="movie.summary"
-  ,[rating]="movie.rating"
+  [name]="movie.name",
+  
+  [poster]="movie.poster",
+  [summery]="movie.summary",
+  [rating]="movie.rating"
 />
 } -->
-<app-counter />
+<!-- <app-counter /> -->
+<!-- <app-color-game /> -->
 <!-- <app-movie-list /> -->
 <!-- <app-user
   name="BhanuSri"

@@ -1,5 +1,13 @@
+<div>
+  <input type=" text" placeholder="enter movie Name" [(ngModel)]="obj.name" />
+  <input type="text" placeholder="enter postar url" [(ngModel)]="obj.poster" />
+  <input type="text" placeholder="enter rating" [(ngModel)]="obj.rating" />
+  <input type="text" placeholder="enter summary" [(ngModel)]="obj.summary" />
+  <button (click)="addMovie()">add Movie</button>
+</div>
+
 <section>
-  @for (movie of Movies; track movie.name) {
+  @for (movie of MoviesList; track $index) {
   <app-movies [Movies]="movie" />
   }
 </section>

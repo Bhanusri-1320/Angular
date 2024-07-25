@@ -1,0 +1,16 @@
+<!-- <input type="text" [(ngModel)]="color" [style.background]="color" />
+<p>{{ color }}</p> -->
+<input
+  type="text"
+  [(ngModel)]="color"
+  [style.background]="color"
+  class="input-con"
+/>
+<button (click)="addColor()">add color</button>
+<!-- <div class="colors" [style.background]="colorList[0]">{{ colorList[0] }}</div>
+<div class="colors" [style.background]="colorList[1]">{{ colorList[1] }}</div>
+<div class="colors" [style.background]="colorList[2]">{{ colorList[2] }}</div> -->
+
+@for (item of colorList ; track $index) {
+<app-color-box [item]="item" />
+}

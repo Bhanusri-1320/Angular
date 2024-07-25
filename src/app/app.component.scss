@@ -21,3 +21,10 @@
 //     font-weight: bold;
 //     font-style: italic;
 // }
+
+.main
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
