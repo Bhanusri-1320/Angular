@@ -1,9 +1,39 @@
 <div>
-  <input type=" text" placeholder="enter movie Name" [(ngModel)]="obj.name" />
-  <input type="text" placeholder="enter postar url" [(ngModel)]="obj.poster" />
-  <input type="number" placeholder="enter rating" [(ngModel)]="obj.rating" />
-  <input type="text" placeholder="enter summary" [(ngModel)]="obj.summary" />
-  <button (click)="addMovie()">add Movie</button>
+  <label for="movie">Movie Name</label>
+
+  <input
+    type=" text"
+    placeholder="enter movie Name"
+    [(ngModel)]="obj.name"
+    id="movie"
+  />
+  <label for="poster">Movie poster</label>
+  <input
+    type="text"
+    placeholder="enter postar url"
+    [(ngModel)]="obj.poster"
+    id="poster"
+  />
+  <label for="rating">Movie Rating</label>
+
+  <input
+    type="number"
+    placeholder="enter rating"
+    [(ngModel)]="obj.rating"
+    id="rating"
+  />
+  <label for="summary"
+    >Movie
+    <summary></summary
+  ></label>
+
+  <input
+    type="text"
+    placeholder="enter summary"
+    [(ngModel)]="obj.summary"
+    id="Summary"
+  />
+  <button (click)="addMovie()">➕add Movie</button>
 </div>
 
 <section>

@@ -25,7 +25,10 @@
       <h1>{{ Movies.name }}</h1>
       <h1>⭐{{ Movies.rating }}</h1>
     </div>
+    <button (click)="Toggle()">Toggle Description</button>
+    @if(show) {
     <p>{{ Movies.summary }}</p>
+    }
   </div>
 </div>
 <!-- <body>

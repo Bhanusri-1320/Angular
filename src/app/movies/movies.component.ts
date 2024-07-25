@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { flatMap } from 'rxjs';
 
 @Component({
   selector: 'app-movies',
@@ -20,7 +21,14 @@ export class MoviesComponent {
     summary:
       'Members of a black ops team must track and eliminate a gang of masked murderers.',
   };
-
+  show = true;
+  Toggle() {
+    if (this.show) {
+      this.show = false;
+    } else {
+      this.show = true;
+    }
+  }
   // Movies=
   //   [
   //     {
