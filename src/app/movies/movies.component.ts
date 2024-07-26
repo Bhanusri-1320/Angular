@@ -1,5 +1,4 @@
-import { Component, Input } from '@angular/core';
-import { flatMap } from 'rxjs';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CounterComponent } from '../counter/counter.component';
 
 @Component({
@@ -15,17 +14,20 @@ export class MoviesComponent {
   // @Input() summary="unknwon";
   // @Input() rating=0;
   @Input() Movies = {
-    name: 'Vikram',
-    poster:
-      'https://m.media-amazon.com/images/M/MV5BMmJhYTYxMGEtNjQ5NS00MWZiLWEwN2ItYjJmMWE2YTU1YWYxXkEyXkFqcGdeQXVyMTEzNzg0Mjkx._V1_.jpg',
-    rating: 8.4,
-    summary:
-      'Members of a black ops team must track and eliminate a gang of masked murderers.',
+    name: '',
+    poster: '',
+    rating: 0,
+    summary: '',
   };
   show = true;
   Toggle() {
     //this.show = this.show ? false : true;
     this.show = !this.show;
+  }
+  @Output() deleteMovieEvent = new EventEmitter<any>();
+
+  deleteMovie() {
+    this.deleteMovieEvent.emit(this.Movies);
   }
   // Movies=
   //   [

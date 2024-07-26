@@ -28,3 +28,9 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+.navigation
+{
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}

@@ -29,10 +29,13 @@
     @if(show) {
     <p>{{ Movies.summary }}</p>
     }
-    <app-counter />
+    <div class="bottom">
+      <app-counter />
+      <button (click)="deleteMovie()">delete</button>
+    </div>
   </div>
-  <button>delete</button>
 </div>
+
 <!-- <body>
   <div class="main-container">
     <div class="image-container">

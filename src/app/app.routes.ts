@@ -4,6 +4,7 @@ import { MoviesComponent } from './movies/movies.component';
 import { ColorGameComponent } from './color-game/color-game.component';
 import { HomeComponent } from './home/home.component';
 import { MovieListComponent } from './movie-list/movie-list.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 export const routes: Routes = [
   {
@@ -12,10 +13,19 @@ export const routes: Routes = [
   },
   {
     path: 'movies',
-    component: AppComponent,
+    component: MovieListComponent,
+  },
+  {
+    path: 'films',
+    redirectTo: '/movies',
+    pathMatch: 'full',
   },
   {
     path: 'color',
     component: ColorGameComponent,
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent,
   },
 ];

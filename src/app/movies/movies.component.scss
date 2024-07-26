@@ -11,6 +11,8 @@ body
     height: 350px;
     max-width: 100%;
     border-radius: 14px;
+    width: 300px;
+    object-fit: cover;
 }
 .content
 {
@@ -33,7 +35,11 @@ body
     justify-content: space-between;
     margin-bottom: 1px;
 }
-
+.bottom
+{
+    display: flex;
+    justify-content: space-between;
+}
 
 
 

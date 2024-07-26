@@ -1,6 +1,5 @@
 <div>
   <label for="movie">Movie Name</label>
-
   <input
     type=" text"
     placeholder="enter movie Name"
@@ -38,6 +37,7 @@
 
 <section>
   @for (movie of MoviesList; track $index) {
-  <app-movies [Movies]="movie" />
+  <app-movies [Movies]="movie" (deleteMovieEvent)="deleteMovie($event)" />
+
   }
 </section>
