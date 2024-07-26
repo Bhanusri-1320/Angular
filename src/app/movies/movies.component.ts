@@ -1,10 +1,18 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CounterComponent } from '../counter/counter.component';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-movies',
   standalone: true,
-  imports: [CounterComponent],
+  imports: [
+    CounterComponent,
+    MatButtonToggleModule,
+    MatCheckboxModule,
+    MatButtonModule,
+  ],
   templateUrl: './movies.component.html',
   styleUrl: './movies.component.scss',
 })

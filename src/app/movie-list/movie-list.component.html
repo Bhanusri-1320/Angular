@@ -1,27 +1,45 @@
 <div>
-  <label for="movie">Movie Name</label>
+  <mat-form-field>
+    <mat-label>Movie Name</mat-label>
+    <input matInput placeholder="Name" [(ngModel)]="obj.name" />
+  </mat-form-field>
+
+  <!-- <label for="movie">Movie Name</label>
   <input
     type=" text"
     placeholder="enter movie Name"
     [(ngModel)]="obj.name"
     id="movie"
-  />
-  <label for="poster">Movie poster</label>
+  /> -->
+  <mat-form-field>
+    <mat-label>Movie poster</mat-label>
+    <input matInput placeholder="Movie poster" [(ngModel)]="obj.rating" />
+  </mat-form-field>
+
+  <!-- <label for="poster">Movie poster</label>
   <input
     type="text"
     placeholder="enter postar url"
     [(ngModel)]="obj.poster"
     id="poster"
-  />
-  <label for="rating">Movie Rating</label>
+  /> -->
+  <mat-form-field>
+    <mat-label>enter rating</mat-label>
+    <input matInput placeholder="enter rating" [(ngModel)]="obj.rating" />
+  </mat-form-field>
+  <!-- <label for="rating">Movie Rating</label>
 
   <input
     type="number"
     placeholder="enter rating"
     [(ngModel)]="obj.rating"
     id="rating"
-  />
-  <label for="summary"
+  /> -->
+  <mat-form-field>
+    <mat-label>summary</mat-label>
+    <input matInput placeholder="summary" [(ngModel)]="obj.summary" />
+  </mat-form-field>
+  <!-- <label for="summary"
     >Movie
     <summary></summary
   ></label>
@@ -31,8 +49,8 @@
     placeholder="enter summary"
     [(ngModel)]="obj.summary"
     id="Summary"
-  />
-  <button (click)="addMovie()">➕add Movie</button>
+  /> -->
+  <button mat-raised-button (click)="addMovie()">➕add Movie</button>
 </div>
 
 <section>

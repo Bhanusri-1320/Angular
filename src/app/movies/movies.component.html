@@ -25,13 +25,15 @@
       <h1>{{ Movies.name }}</h1>
       <h1>⭐{{ Movies.rating }}</h1>
     </div>
-    <button (click)="Toggle()">Toggle Description</button>
+    <mat-checkbox (click)="Toggle()"> Toggle Description</mat-checkbox>
+    <!-- <mat-button-toggle value="sugar">Sugar</mat-button-toggle>
+    <button mat-button-toggle (click)="Toggle()">Toggle Description</button> -->
     @if(show) {
     <p>{{ Movies.summary }}</p>
     }
     <div class="bottom">
       <app-counter />
-      <button (click)="deleteMovie()">delete</button>
+      <button mat-raised-button (click)="deleteMovie()">delete</button>
     </div>
   </div>
 </div>

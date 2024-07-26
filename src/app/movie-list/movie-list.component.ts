@@ -1,18 +1,20 @@
 import { Component, Input } from '@angular/core';
 import { MoviesComponent } from '../movies/movies.component';
 import { FormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
 
 @Component({
   selector: 'app-movie-list',
   standalone: true,
-  imports: [MoviesComponent, FormsModule],
+  imports: [MoviesComponent, FormsModule, MatButtonModule, MatInputModule],
   templateUrl: './movie-list.component.html',
   styleUrl: './movie-list.component.scss',
 })
 export class MovieListComponent {
   name = '';
   poster = '';
-  rating = '';
+  rating = 0;
   summary = '';
   // @Input() MoviesList: any;
   obj = {
