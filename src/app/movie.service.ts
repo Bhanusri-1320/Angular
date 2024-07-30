@@ -115,7 +115,6 @@ export class MovieService {
       id: '109',
     },
   ];
-
   constructor() {}
   getMovieByIndex(arg0: number): any {
     return this.MoviesList[arg0];
