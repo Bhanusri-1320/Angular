@@ -2,7 +2,9 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CounterComponent } from '../counter/counter.component';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatButtonModule } from '@angular/material/button';
+import { MatButtonModule, MatIconButton } from '@angular/material/button';
+import { RouterLink } from '@angular/router';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-movies',
@@ -12,21 +14,28 @@ import { MatButtonModule } from '@angular/material/button';
     MatButtonToggleModule,
     MatCheckboxModule,
     MatButtonModule,
+    MatIconButton,
+    RouterLink,
+    MatIconModule,
   ],
   templateUrl: './movies.component.html',
   styleUrl: './movies.component.scss',
 })
 export class MoviesComponent {
+  [x: string]: any;
   // @Input() poster="";
   // @Input() name="Movie Name";
   // @Input() summary="unknwon";
   // @Input() rating=0;
   @Input() Movies = {
+    id: '',
     name: '',
     poster: '',
     rating: 0,
     summary: '',
+    trailer: '',
   };
+  @Input() id = 0;
   show = true;
   Toggle() {
     //this.show = this.show ? false : true;

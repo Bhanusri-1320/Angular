@@ -6,15 +6,21 @@ import { HomeComponent } from './home/home.component';
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AddMovieComponent } from './add-movie/add-movie.component';
+import { MovieDetailsComponent } from './movie-details/movie-details.component';
 
 export const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
   },
+
   {
     path: 'movies',
     component: MovieListComponent,
+  },
+  {
+    path: 'movies/:id',
+    component: MovieDetailsComponent,
   },
   {
     path: 'movies/add',
@@ -29,6 +35,7 @@ export const routes: Routes = [
     path: 'color',
     component: ColorGameComponent,
   },
+
   {
     path: '**',
     component: PageNotFoundComponent,

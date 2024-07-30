@@ -1,8 +1,11 @@
 <!-- <app-add-movie [MoviesList]="MoviesList" /> -->
 <section>
   @for (movie of movieServie.MoviesList; track $index) {
-  <app-movies [Movies]="movie" (deleteMovieEvent)="deleteMovie($event)" />
-
+  <app-movies
+    [Movies]="movie"
+    (deleteMovieEvent)="deleteMovie($event)"
+    [id]="$index"
+  />
   }
 </section>
 

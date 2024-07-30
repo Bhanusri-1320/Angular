@@ -13,16 +13,20 @@ import { MovieService } from '../movie.service';
 })
 export class AddMovieComponent {
   @Input() MoviesList: any;
+  id = '';
   name = '';
   poster = '';
   rating = 0;
   summary = '';
+  trailer = '';
   // @Input() MoviesList: any;
   obj = {
+    id: this.id,
     name: this.name,
     poster: this.poster,
     rating: +this.rating,
     summary: this.summary,
+    trailer: this.trailer,
   };
   constructor(public movieService: MovieService) {}
   addMovie() {

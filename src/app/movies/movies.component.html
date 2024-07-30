@@ -23,9 +23,17 @@
   <div class="content">
     <div class="head-container">
       <h2>{{ Movies.name }}</h2>
+      <button
+        mat-icon-button
+        aria-label="Example icon button with a vertical three dot icon"
+        routerLink="{{ id }}"
+      >
+        <mat-icon>info</mat-icon>
+      </button>
       <h2>⭐{{ Movies.rating }}</h2>
     </div>
-    <mat-checkbox (click)="Toggle()"> Toggle Description</mat-checkbox>
+    <button mat-raised-button (click)="Toggle()">Description</button>
+
     <!-- <mat-button-toggle value="sugar">Sugar</mat-button-toggle>
     <button mat-button-toggle (click)="Toggle()">Toggle Description</button> -->
     @if(show) {

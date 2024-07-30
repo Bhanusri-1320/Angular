@@ -1,0 +1,27 @@
+<div class="main-container">
+  <!-- <img src="{{ Movies.poster }}" alt="" class="image" /> -->
+  <!-- <iframe [src]="Movies.trailer" frameborder="0"></iframe> -->
+  <iframe
+    width="914"
+    height="514"
+    [src]="trustedUrl"
+    title="Kalki 2898 AD Trailer - Hindi | Prabhas | Amitabh Bachchan | Kamal Haasan | Deepika | Nag Ashwin"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen
+  ></iframe>
+  <div class="content">
+    <div class="head-container">
+      <h2>{{ Movies.name }}</h2>
+      <h2>⭐{{ Movies.rating }}</h2>
+    </div>
+    <p>{{ Movies.summary }}</p>
+  </div>
+</div>
+
+<!-- <img
+  src="https://englishtribuneimages.blob.core.windows.net/gallary-content/2021/6/Desk/2021_6$largeimg_977224513.JPG"
+  alt=""
+  class="image"
+/> -->
