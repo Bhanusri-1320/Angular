@@ -127,7 +127,7 @@ export class MovieService {
       (res) => res.json()
     );
   }
-  // TODO
+
   addMovieP(newMovie: any) {
     // this.movies.push(newMovie);
     return fetch(`https://669a42939ba098ed61fef789.mockapi.io/MoviesList`, {
