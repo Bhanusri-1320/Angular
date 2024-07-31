@@ -8,7 +8,7 @@ html {
   @include mat.color-variants-backwards-compatibility($theme);
 }
 body{
-    place-content: center;
+    // place-content: center;
     min-height: 100vh;
     display: grid;
     margin: 0%;

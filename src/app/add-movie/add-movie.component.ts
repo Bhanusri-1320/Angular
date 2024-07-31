@@ -13,13 +13,15 @@ import { Route, Router } from '@angular/router';
   styleUrl: './add-movie.component.scss',
 })
 export class AddMovieComponent {
-  @Input() MoviesList: any;
-  id = '';
-  name = '';
-  poster = '';
-  rating = 0;
-  summary = '';
-  trailer = '';
+  // @Input() MoviesList: any;
+  name = 'Kalki 2898 AD';
+  poster =
+    'https://m.media-amazon.com/images/M/MV5BMTM3ZGUwYTEtZTI5NS00ZmMyLTk2YmQtMWU4YjlhZTI3NjRjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg';
+  rating = 10;
+  summary =
+    'In 2898 AD, 6,000 years after the events of the Kurukshetra War, the desertified city of Kasi stands as the last known city in a post-apocalyptic world dominated by Supreme Yaskin, a totalitarian god king. Yaskin rules from the Complex, an inverted-pyramid megastructure that tovers above the city.';
+  trailer =
+    '<iframe width="914" height="514" src="https://www.youtube.com/embed/kQDd1AhGIHk" title="Kalki 2898 AD Trailer - Hindi | Prabhas | Amitabh Bachchan | Kamal Haasan | Deepika | Nag Ashwin" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
   // @Input() MoviesList: any;
   movie = {
     name: this.name,
@@ -32,6 +34,7 @@ export class AddMovieComponent {
   addMovie() {
     // this.movieService.MoviesList.push(this.obj);
     this.movieService.addMovieP(this.movie);
+    console.log(this.movie);
     this.route.navigate(['movies']);
   }
 }
