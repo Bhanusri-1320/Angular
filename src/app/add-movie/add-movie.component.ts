@@ -23,18 +23,19 @@ export class AddMovieComponent {
   trailer =
     '<iframe width="914" height="514" src="https://www.youtube.com/embed/kQDd1AhGIHk" title="Kalki 2898 AD Trailer - Hindi | Prabhas | Amitabh Bachchan | Kamal Haasan | Deepika | Nag Ashwin" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
   // @Input() MoviesList: any;
-  movie = {
-    name: this.name,
-    poster: this.poster,
-    rating: +this.rating,
-    summary: this.summary,
-    trailer: this.trailer,
-  };
+
   constructor(public movieService: MovieService, private route: Router) {}
   addMovie() {
+    let obj: any = {
+      name: this.name,
+      poster: this.poster,
+      rating: +this.rating,
+      summary: this.summary,
+      trailer: this.trailer,
+    };
     // this.movieService.MoviesList.push(this.obj);
-    this.movieService.addMovieP(this.movie);
-    console.log(this.movie);
+    this.movieService.addMovieP(obj);
+    console.log(obj);
     this.route.navigate(['movies']);
   }
 }
