@@ -7,9 +7,11 @@
   <app-movies
     [Movies]="movie"
     (deleteMovieEvent)="deleteMovie($event)"
+    (editMovieEvent)="editMovie($event)"
     [id]="movie.id"
   />
   }
+  <app-edit-movie [movie]="editmovie" />
 </section>
 <!-- <h1>{{ movieServie.num }}</h1> -->
 

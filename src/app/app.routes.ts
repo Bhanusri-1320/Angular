@@ -8,6 +8,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { AddMovieComponent } from './add-movie/add-movie.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { authGuard } from './auth.guard';
+import { EditMovieComponent } from './edit-movie/edit-movie.component';
 
 export const routes: Routes = [
   {
@@ -19,6 +20,7 @@ export const routes: Routes = [
     path: 'movies',
     children: [
       { path: '', component: MovieListComponent },
+      { path: 'edit', component: EditMovieComponent },
       { path: 'add', component: AddMovieComponent, canActivate: [authGuard] },
       { path: ':id', component: MovieDetailsComponent },
     ],

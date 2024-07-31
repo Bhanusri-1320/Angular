@@ -42,9 +42,13 @@ export class MoviesComponent {
     this.show = !this.show;
   }
   @Output() deleteMovieEvent = new EventEmitter<any>();
+  @Output() editMovieEvent = new EventEmitter<any>();
 
   deleteMovie() {
     this.deleteMovieEvent.emit(this.Movies);
+  }
+  editMovie() {
+    this.editMovieEvent.emit(this.Movies);
   }
   // Movies=
   //   [
