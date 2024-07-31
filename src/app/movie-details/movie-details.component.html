@@ -2,6 +2,7 @@
   <!-- <img src="{{ Movies.poster }}" alt="" class="image" /> -->
   <!-- <iframe [src]="Movies.trailer" frameborder="0"></iframe> -->
   <iframe
+    class="image"
     width="914"
     height="514"
     [src]="trustedUrl"
@@ -12,10 +13,8 @@
     allowfullscreen
   ></iframe>
   <div class="content">
-    <div class="head-container">
-      <h2>{{ Movies.name }}</h2>
-      <h2>⭐{{ Movies.rating }}</h2>
-    </div>
+    <h2>{{ Movies.name }}</h2>
+    <h2>⭐{{ Movies.rating }}</h2>
     <p>{{ Movies.summary }}</p>
   </div>
 </div>

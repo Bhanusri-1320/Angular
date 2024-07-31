@@ -15,7 +15,6 @@
     </div>
   </main>
 </body> -->
-
 <div class="main-container">
   <div class="image-container">
     <img src="{{ Movies.poster }}" alt="" class="image" />
@@ -26,13 +25,21 @@
       <button
         mat-icon-button
         aria-label="Example icon button with a vertical three dot icon"
+        (click)="Toggle()"
+      >
+        <mat-icon>keyboard_arrow_up</mat-icon>
+      </button>
+      <button
+        mat-icon-button
+        aria-label="Example icon button with a vertical three dot icon"
         routerLink="{{ id }}"
       >
         <mat-icon>info</mat-icon>
       </button>
       <h2>⭐{{ Movies.rating }}</h2>
     </div>
-    <button mat-raised-button (click)="Toggle()">Description</button>
+
+    <!-- <button mat-raised-button (click)="Toggle()">Description</button> -->
 
     <!-- <mat-button-toggle value="sugar">Sugar</mat-button-toggle>
     <button mat-button-toggle (click)="Toggle()">Toggle Description</button> -->

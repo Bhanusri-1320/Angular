@@ -1,12 +1,16 @@
 <!-- <app-add-movie [MoviesList]="MoviesList" /> -->
+
 <section>
-  @for (movie of movieServie.MoviesList; track $index) {
+  @if(isLoading) {
+  <h1>Loading...</h1>
+  } @for (movie of Movies; track $index) {
   <app-movies
     [Movies]="movie"
     (deleteMovieEvent)="deleteMovie($event)"
-    [id]="$index"
+    [id]="movie.id"
   />
   }
 </section>
+<!-- <h1>{{ movieServie.num }}</h1> -->
 
-<h1>{{ movieServie.num }}</h1>
+<!-- [id]="$index" -->

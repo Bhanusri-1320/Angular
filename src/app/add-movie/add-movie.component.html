@@ -1,54 +1,32 @@
-<div>
+<div class="add-movie-form">
   <mat-form-field>
-    <mat-label>Movie Name</mat-label>
-    <input matInput placeholder="Name" [(ngModel)]="obj.name" />
+    <mat-label>Name</mat-label>
+    <input matInput placeholder="Phani the rockstar ⭐" [(ngModel)]="name" />
   </mat-form-field>
 
-  <!-- <label for="movie">Movie Name</label>
-    <input
-      type=" text"
-      placeholder="enter movie Name"
-      [(ngModel)]="obj.name"
-      id="movie"
-    /> -->
   <mat-form-field>
-    <mat-label>Movie poster</mat-label>
-    <input matInput placeholder="Movie poster" [(ngModel)]="obj.rating" />
+    <mat-label>Poster</mat-label>
+    <input matInput placeholder="http://" [(ngModel)]="poster" />
   </mat-form-field>
 
-  <!-- <label for="poster">Movie poster</label>
-    <input
-      type="text"
-      placeholder="enter postar url"
-      [(ngModel)]="obj.poster"
-      id="poster"
-    /> -->
   <mat-form-field>
-    <mat-label>enter rating</mat-label>
-    <input matInput placeholder="enter rating" [(ngModel)]="obj.rating" />
+    <mat-label>Rating</mat-label>
+    <input type="number" matInput placeholder="8" [(ngModel)]="rating" />
   </mat-form-field>
-  <!-- <label for="rating">Movie Rating</label>
-  
-    <input
-      type="number"
-      placeholder="enter rating"
-      [(ngModel)]="obj.rating"
-      id="rating"
-    /> -->
+
   <mat-form-field>
-    <mat-label>summary</mat-label>
-    <input matInput placeholder="summary" [(ngModel)]="obj.summary" />
-  </mat-form-field>
-  <!-- <label for="summary"
-      >Movie
-      <summary></summary
-    ></label>
-  
+    <mat-label>Summary</mat-label>
     <input
-      type="text"
-      placeholder="enter summary"
-      [(ngModel)]="obj.summary"
-      id="Summary"
-    /> -->
-  <button mat-raised-button (click)="addMovie()">➕add Movie</button>
+      matInput
+      placeholder="Your awesome summary 🎊"
+      [(ngModel)]="summary"
+    />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Trailer</mat-label>
+    <input matInput placeholder="http://" [(ngModel)]="trailer" />
+  </mat-form-field>
+
+  <button mat-raised-button (click)="addMovie()">Add Movie</button>
 </div>

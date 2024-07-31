@@ -19,13 +19,14 @@ export const routes: Routes = [
     component: MovieListComponent,
   },
   {
-    path: 'movies/:id',
-    component: MovieDetailsComponent,
-  },
-  {
     path: 'movies/add',
     component: AddMovieComponent,
   },
+  {
+    path: 'movies/:id',
+    component: MovieDetailsComponent,
+  },
+
   {
     path: 'films',
     redirectTo: '/movies',

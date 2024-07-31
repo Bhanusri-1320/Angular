@@ -20,14 +20,25 @@ import { MovieService } from '../movie.service';
   styleUrl: './movie-list.component.scss',
 })
 export class MovieListComponent {
+  isLoading: boolean = true;
+  Movies: any = [];
   constructor(public movieServie: MovieService) {
-    console.log(this.movieServie.MoviesList);
+    // console.log(this.movieServie.MoviesList);
+  }
+  ngOnInit() {
+    this.loadMovies();
+  }
+  loadMovies() {
+    this.movieServie.getAllMoviesp().then((data) => {
+      this.Movies = data;
+      this.isLoading = false;
+    });
   }
   deleteMovie(movie: any) {
-    this.movieServie.MoviesList.splice(
-      this.movieServie.MoviesList.indexOf(movie),
-      1
-    );
-    //this.MoviesList.splice(1, 1);
+    this.movieServie.deleteMovieP(movie).then(() => this.loadMovies());
+    // let idx = this.Movies.indexOf(movie);
+    // this.Movies.splice(idx, 1);
+    // //this.MoviesList.splice(1, 1);
+    // return this.Movies;
   }
 }
