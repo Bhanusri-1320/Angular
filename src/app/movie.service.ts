@@ -138,6 +138,19 @@ export class MovieService {
       },
     }).then((res) => res.json());
   }
+  updateMovies(movie: any) {
+    fetch(
+      `https://669a42939ba098ed61fef789.mockapi.io/MoviesList/${movie.id}`,
+      {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(movie),
+      }
+    );
+    this.getAllMoviesp();
+  }
 
   getMovieByIndex(arg0: number): any {
     return this.MoviesList[arg0];

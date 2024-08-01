@@ -49,6 +49,6 @@ export class MovieListComponent {
     console.log('newwww');
     console.log(editmovie.id);
     console.log(editmovie);
-    this.route.navigate(['movies/edit']);
+    this.route.navigate([`movies/edit/${editmovie.id}`]);
   }
 }

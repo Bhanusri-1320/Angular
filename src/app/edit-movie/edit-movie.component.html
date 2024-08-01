@@ -1,3 +1,35 @@
-<p>edit-movie works!</p>
-<h1>{{ name }}</h1>
-{{ movie.name }}
+<div class="add-movie-form">
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input
+      matInput
+      placeholder="Phani the rockstar ⭐"
+      [(ngModel)]="movie.name"
+    />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Poster</mat-label>
+    <input matInput placeholder="http://" [(ngModel)]="movie.poster" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Rating</mat-label>
+    <input type="number" matInput placeholder="8" [(ngModel)]="movie.summary" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Summary</mat-label>
+    <input
+      matInput
+      placeholder="Your awesome summary 🎊"
+      [(ngModel)]="movie.summary"
+    />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Trailer</mat-label>
+    <input matInput placeholder="http://" [(ngModel)]="movie.trailer" />
+  </mat-form-field>
+  <button mat-raised-button (click)="saveMovie()">Save</button>
+  <!-- <button mat-raised-button (click)="addMovie()">Add Movie</button> -->
+</div>

@@ -15,12 +15,11 @@ export const routes: Routes = [
     path: '',
     component: HomeComponent,
   },
-
   {
     path: 'movies',
     children: [
       { path: '', component: MovieListComponent },
-      { path: 'edit', component: EditMovieComponent },
+      { path: 'edit/:id', component: EditMovieComponent },
       { path: 'add', component: AddMovieComponent, canActivate: [authGuard] },
       { path: ':id', component: MovieDetailsComponent },
     ],
