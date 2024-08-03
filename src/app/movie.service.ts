@@ -139,17 +139,28 @@ export class MovieService {
     }).then((res) => res.json());
   }
   updateMovies(movie: any) {
-    fetch(
-      `https://669a42939ba098ed61fef789.mockapi.io/MoviesList/${movie.id}`,
+    // return fetch(
+    //   `https://669a42939ba098ed61fef789.mockapi.io/MoviesList/${movie.id}`,
+    //   {
+    //     method: 'PUT',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify(movie),
+    //   }
+    // );
+
+    return fetch(
+      `https://6402db84f61d96ac487212a6.mockapi.io/movies/${movie.id}`,
       {
         method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-        },
         body: JSON.stringify(movie),
+        headers: {
+          'Content-type': 'application/json',
+        },
       }
-    );
-    this.getAllMoviesp();
+    ).then((res) => res.json());
+    //this.getAllMoviesp();
   }
 
   getMovieByIndex(arg0: number): any {

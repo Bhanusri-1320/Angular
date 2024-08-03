@@ -22,7 +22,6 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrl: './movies.component.scss',
 })
 export class MoviesComponent {
-  [x: string]: any;
   // @Input() poster="";
   // @Input() name="Movie Name";
   // @Input() summary="unknwon";

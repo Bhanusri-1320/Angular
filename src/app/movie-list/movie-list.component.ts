@@ -39,6 +39,7 @@ export class MovieListComponent {
     });
   }
   deleteMovie(movie: any) {
+    console.log(movie);
     this.movieServie.deleteMovieP(movie).then(() => this.loadMovies());
     // let idx = this.Movies.indexOf(movie);
     // this.Movies.splice(idx, 1);
