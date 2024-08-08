@@ -76,10 +76,8 @@ export class AddMovieComponent {
   addMovie() {
     console.log(this.movieForm.value);
     // Todo: Fix Add - Technical Debt
-
     if (this.movieForm.valid) {
       let newMovie: any = this.movieForm.value;
-
       this.movieService.addMovieP(newMovie).then(() => {
         // Move to movies page
         this.route.navigate(['movies']);

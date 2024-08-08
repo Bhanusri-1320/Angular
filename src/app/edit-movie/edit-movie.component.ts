@@ -41,7 +41,6 @@ export class EditMovieComponent {
     private router: Router
   ) {
     this.movieList = this.movieServie.getAllMoviesp();
-
     // formGroup -> formControlName
     this.movieForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(2)]],
@@ -102,9 +101,9 @@ export class EditMovieComponent {
     //     this.msg = 'Something went wrong';
     //   });
 
-    let id = this.route.snapshot.paramMap.get('id') as string; // From URL
+    this.movieId = this.route.snapshot.paramMap.get('id') as string; // From URL
 
-    this.movieServie.getMoviesByIdp(id).then((data) => {
+    this.movieServie.getMoviesByIdp(this.movieId).then((data) => {
       console.log(data);
       // this.movieForm.setValue vs this.movieForm.patchValue
       this.movieForm.patchValue(data);
@@ -117,7 +116,7 @@ export class EditMovieComponent {
     if (this.movieForm.valid) {
       let updatedMovie: any = this.movieForm.value;
       console.log(this.movieForm.value);
-      this.movieServie.updateMovies(updatedMovie).then(() => {
+      this.movieServie.updateMovies(this.movieId, updatedMovie).then(() => {
         this.router.navigate(['movies']);
       });
     }

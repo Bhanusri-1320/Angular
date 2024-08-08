@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
-
+// const API = 'https://669a42939ba098ed61fef789.mockapi.io';
+// const API = 'http://localhost:4000';
+const API = 'https://node-js-ci74.onrender.com';
 @Injectable({
   providedIn: 'root',
 })
@@ -117,20 +119,18 @@ export class MovieService {
   // ];
   MoviesList: any = [];
   constructor() {
-    fetch('https://669a42939ba098ed61fef789.mockapi.io/MoviesList')
+    fetch(`${API}/Movies`)
       .then((res) => res.json())
       .then((res) => (this.MoviesList = res));
   }
 
   getAllMoviesp() {
-    return fetch('https://669a42939ba098ed61fef789.mockapi.io/MoviesList').then(
-      (res) => res.json()
-    );
+    return fetch(`${API}/Movies`).then((res) => res.json());
   }
 
   addMovieP(newMovie: any) {
     // this.movies.push(newMovie);
-    return fetch(`https://669a42939ba098ed61fef789.mockapi.io/MoviesList`, {
+    return fetch(`${API}/Movies`, {
       method: 'POST',
       body: JSON.stringify(newMovie),
       headers: {
@@ -138,7 +138,7 @@ export class MovieService {
       },
     }).then((res) => res.json());
   }
-  updateMovies(movie: any) {
+  updateMovies(movieId: any, movie: any) {
     // return fetch(
     //   `https://669a42939ba098ed61fef789.mockapi.io/MoviesList/${movie.id}`,
     //   {
@@ -149,17 +149,14 @@ export class MovieService {
     //     body: JSON.stringify(movie),
     //   }
     // );
-
-    return fetch(
-      `https://6402db84f61d96ac487212a6.mockapi.io/movies/${movie.id}`,
-      {
-        method: 'PUT',
-        body: JSON.stringify(movie),
-        headers: {
-          'Content-type': 'application/json',
-        },
-      }
-    ).then((res) => res.json());
+    console.log(movieId);
+    return fetch(`${API}/Movies/${movieId}`, {
+      method: 'PUT',
+      body: JSON.stringify(movie),
+      headers: {
+        'Content-type': 'application/json',
+      },
+    }).then((res) => res.json());
     //this.getAllMoviesp();
   }
 
@@ -173,16 +170,11 @@ export class MovieService {
   //   // return this.MoviesList;
   // }
   getMoviesByIdp(id: string) {
-    return fetch(
-      `https://669a42939ba098ed61fef789.mockapi.io/MoviesList/${id}`
-    ).then((res) => res.json());
+    return fetch(`${API}/Movies/${id}`).then((res) => res.json());
   }
   deleteMovieP(movie: any) {
-    return fetch(
-      `https://669a42939ba098ed61fef789.mockapi.io/MoviesList/${movie.id} `,
-      {
-        method: 'DELETE',
-      }
-    ).then((res) => res.json());
+    return fetch(`${API}/Movies/${movie.id} `, {
+      method: 'DELETE',
+    }).then((res) => res.json());
   }
 }
