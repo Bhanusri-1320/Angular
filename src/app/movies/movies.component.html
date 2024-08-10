@@ -15,45 +15,47 @@
     </div>
   </main>
 </body> -->
-<div class="main-container">
-  <div class="image-container">
-    <img src="{{ Movies.poster }}" alt="" class="image" />
-  </div>
-  <div class="content">
-    <div class="head-container">
-      <h2>{{ Movies.name }}</h2>
-      <button
-        mat-icon-button
-        aria-label="Example icon button with a vertical three dot icon"
-        (click)="Toggle()"
-      >
-        <mat-icon>keyboard_arrow_up</mat-icon>
-      </button>
-      <button
-        mat-icon-button
-        aria-label="Example icon button with a vertical three dot icon"
-        routerLink="{{ id }}"
-      >
-        <mat-icon>info</mat-icon>
-      </button>
-      <h2>⭐{{ Movies.rating }}</h2>
-    </div>
+<mat-card appearance="outlined" class="card">
+  <mat-card-content>
+    <div class="main-container">
+      <div class="image-container">
+        <img src="{{ Movies.poster }}" alt="" class="image" />
+      </div>
+      <div class="content">
+        <div class="head-container">
+          <h2>{{ Movies.name }}</h2>
+          <button
+            mat-icon-button
+            aria-label="Example icon button with a vertical three dot icon"
+            (click)="Toggle()"
+          >
+            <mat-icon>keyboard_arrow_up</mat-icon>
+          </button>
+          <button
+            mat-icon-button
+            aria-label="Example icon button with a vertical three dot icon"
+            routerLink="{{ id }}"
+          >
+            <mat-icon>info</mat-icon>
+          </button>
+          <h2>⭐{{ Movies.rating }}</h2>
+        </div>
 
-    <!-- <button mat-raised-button (click)="Toggle()">Description</button> -->
+        <!-- <button mat-raised-button (click)="Toggle()">Description</button> -->
 
-    <!-- <mat-button-toggle value="sugar">Sugar</mat-button-toggle>
+        <!-- <mat-button-toggle value="sugar">Sugar</mat-button-toggle>
     <button mat-button-toggle (click)="Toggle()">Toggle Description</button> -->
-    @if(show) {
-    <p>{{ Movies.summary }}</p>
-    }
-    <div class="bottom">
-      <app-counter />
-      <button mat-raised-button (click)="deleteMovie()">delete</button>
-      <button mat-raised-button (click)="editMovie()">✏️</button>
-    </div>
-  </div>
+        @if(show) {
+        <p>{{ Movies.summary }}</p>
+        }
+        <div class="bottom">
+          <app-counter />
+          <button mat-raised-button (click)="deleteMovie()">delete</button>
+          <button mat-raised-button (click)="editMovie()">✏️</button>
+        </div>
+      </div>
 
-  <!-- <body>
+      <!-- <body>
   <div class="main-container">
     <div class="image-container">
       <img src="{{ Movies.poster }}" alt="" />
@@ -67,4 +69,6 @@
     </div>
   </div>
 </body> -->
-</div>
+    </div>
+  </mat-card-content>
+</mat-card>

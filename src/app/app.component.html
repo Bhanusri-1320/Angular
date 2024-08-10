@@ -58,12 +58,27 @@ Calling Component -->
 
 <!-- <app-movie-list [MoviesList]="MoviesList" /> -->
 
-<nav class="navigation">
+<!-- <nav class="navigation">
   <a routerLink="/">Home</a>
   <a routerLink="/movies">Movies</a>
   <a routerLink="/color">color-game</a>
   <a routerLink="/movies/add">Add Movie</a>
   <a routerLink="/movies/edit/:id">Edit Movie</a>
+</nav> -->
+
+<nav class="navigation">
+  <div class="icon">
+    <i class="fa-solid fa-utensils"></i>
+  </div>
+  <ul>
+    <a routerLink="/">Home</a>
+    <a routerLink="/movies">Movies</a>
+    <a routerLink="/color">color-game</a>
+    <a routerLink="/movies/add">Add Movie</a>
+    <a routerLink="/movies/edit/:id">Edit Movie</a>
+    <!-- <a routerLink="/recipes">Recipe</a> -->
+    <!-- <a routerLink="/addrecipe">Add Recipe</a> -->
+  </ul>
 </nav>
 <router-outlet>
   <!-- @for (movie of Movies; track movie.name) {

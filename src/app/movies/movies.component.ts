@@ -5,6 +5,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule, MatIconButton } from '@angular/material/button';
 import { RouterLink } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-movies',
@@ -17,6 +18,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatIconButton,
     RouterLink,
     MatIconModule,
+    MatCardModule,
   ],
   templateUrl: './movies.component.html',
   styleUrl: './movies.component.scss',
